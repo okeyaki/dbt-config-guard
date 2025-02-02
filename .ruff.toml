@@ -1,0 +1,42 @@
+line-length = 200
+
+[lint]
+select = [
+  "ALL",
+]
+
+ignore = [
+  "A005", # https://docs.astral.sh/ruff/rules/stdlib-module-shadowing/
+  "D", # https://docs.astral.sh/ruff/rules/#pydocstyle-d
+  "FLY", # https://docs.astral.sh/ruff/rules/#flynt-fly
+  "PERF", # https://docs.astral.sh/ruff/rules/#perflint-perf
+  "SIM110", # https://docs.astral.sh/ruff/rules/reimplemented-builtin/
+]
+
+
+[lint.flake8-tidy-imports]
+ban-relative-imports = "all"
+
+
+[lint.isort]
+forced-separate = [
+  "test",
+]
+
+force-single-line = true
+
+known-first-party = [
+  "dbt_config_guard",
+  "test",
+]
+
+lines-after-imports = 1
+
+order-by-type = false
+
+
+[lint.per-file-ignores]
+"src/test/*.py" = [
+  "PLR2004", # https://docs.astral.sh/ruff/rules/magic-value-comparison/
+  "S101", # https://docs.astral.sh/ruff/rules/assert/
+]
