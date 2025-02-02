@@ -1,0 +1,5 @@
+models:
+  - name: "mart__orders"
+    columns:
+      - name: "order_id"
+        data_type: "VARCHAR"

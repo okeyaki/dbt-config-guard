@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+.venv/
+
+# Ruff
+.ruff_cache/
+
+# Visual Studio Code
+*.code-workspace
+
+# dotenv
+.env
+
+# mypy
+.mypy_cache/
+
+# pytest
+.pytest_cache/
+.coverage

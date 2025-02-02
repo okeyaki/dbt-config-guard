@@ -1,0 +1,22 @@
+# https://github.com/okeyaki/dbt-config-guard/tree/main/doc/rules
+
+rules.models.description.required:
+  - when:
+      model_names:
+        - "^mart__"
+
+rules.model_columns.description.consistent: true
+
+rules.model_columns.description.required:
+  - when:
+      model_names:
+        - "^mart__"
+
+rules.model_columns.data_tests.required:
+  - data_test_names:
+      - "not_null"
+      - "unique"
+    when:
+      model_column_names: "_id$"
+
+rules.sources.description.required: true

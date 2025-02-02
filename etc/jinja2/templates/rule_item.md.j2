@@ -1,0 +1,13 @@
+<!--
+Generated from `etc/jinja2/templates/_rule.md.j2`
+-->
+
+# {{ rule_schema.name }}
+
+## Description
+
+{{ rule_schema.description | dedent }}
+
+## Schema
+
+<pre><code>{{ rule_schema.to_json_schema() | tojson(indent=2) }}</code></pre>

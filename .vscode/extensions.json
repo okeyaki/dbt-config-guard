@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "EditorConfig.EditorConfig",
+    "charliermarsh.ruff",
+    "emeraldwalk.RunOnSave",
+    "ms-python.mypy-type-checker",
+    "ms-python.python",
+  ]
+}

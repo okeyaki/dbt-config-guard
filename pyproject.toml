@@ -1,0 +1,46 @@
+[project]
+name = "dbt-config-guard"
+
+version = "0.1.0"
+
+description = "A tool that checks dbt project configurations based on rules."
+
+readme = "README.md"
+
+license = { file = "LICENSE" }
+
+requires-python = ">= 3.9"
+
+dependencies = [
+  "click==8.1.8",
+  "ruamel-yaml==0.18.10",
+]
+
+
+[project.scripts]
+dbt-config-guard = "dbt_config_guard.main:main"
+
+
+[dependency-groups]
+dev = [
+  "jinja2==3.1.5",
+  "lefthook==1.8.2",
+  "mypy==1.14.1",
+  "pytest-cov==6.0.0",
+  "pytest-mock==3.14.0",
+  "ruff==0.9.3",
+]
+
+
+[tool.hatch.build.targets.wheel]
+packages = [
+  "src/main/dbt_config_guard",
+]
+
+
+[build-system]
+build-backend = "hatchling.build"
+
+requires = [
+  "hatchling",
+]

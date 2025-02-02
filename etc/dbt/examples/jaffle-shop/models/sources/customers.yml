@@ -1,0 +1,11 @@
+version: 2
+sources:
+  - name: "default"
+    schema: "source"
+    tables:
+      - name: "customers"
+        columns:
+          - name: "id"
+            data_type: "VARCHAR"
+          - name: "name"
+            data_type: "VARCHAR"
