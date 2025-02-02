@@ -1,0 +1,5 @@
+models:
+  - name: "mart__customers"
+    columns:
+      - name: "customer_id"
+        data_type: "VARCHAR"

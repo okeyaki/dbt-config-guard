@@ -1,0 +1,12 @@
+# https://evilmartians.github.io/lefthook/configuration/index.html
+pre-commit:
+  piped: true
+  commands:
+    check-python-mypy:
+      glob: "*.py"
+      run: |
+        mypy src
+    check-python-ruff:
+      glob: "*.py"
+      run: |
+        ruff check --fix {staged_files}

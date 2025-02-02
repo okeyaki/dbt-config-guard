@@ -1,0 +1,24 @@
+<!--
+Generated from `etc/jinja2/templates/_rule.md.j2`
+-->
+
+# Rules
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+{%- for rule_class in rule_classes %}
+    <tr>
+      <td>
+        <a href="/doc/rules/{{ rule_class.schema().name }}.md">{{ rule_class.schema().name }}</a>
+      </td>
+      <td>{{ rule_class.schema().description | dedent }}</td>
+    </tr>
+{%- endfor %}
+  </tbody>
+</table>
